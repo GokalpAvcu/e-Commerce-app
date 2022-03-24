@@ -1,6 +1,7 @@
 import './App.css';
-import {BrowserRouter as Router,Switch,Route,Link} from "react-router-dom"; // router-dom özelliği
+import {BrowserRouter as Router,Switch,Route} from "react-router-dom"; // router-dom özelliği
 import Navbar from './components/Navbar'; // navbar'ı import ettim
+
 
 
 function App() {
