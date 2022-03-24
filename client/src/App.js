@@ -8,10 +8,13 @@ function App() {
     <Router>
     <div>
      <Navbar/> 
+      <div id="content">
 
+      
       <Switch>
         <Route path="/" component={Home} />
       </Switch>
+      </div>
     </div>
   </Router>
   );
