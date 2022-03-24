@@ -1,15 +1,14 @@
 import './App.css';
-import {BrowserRouter as Router,Switch,Route,Link} from "react-router-dom";
+import {BrowserRouter as Router,Switch,Route,Link} from "react-router-dom"; // router-dom özelliği
+import Navbar from './components/Navbar'; // navbar'ı import ettim
 
 
 function App() {
   return (
     <Router>
     <div>
-     
+     <Navbar/> 
 
-      {/* A <Switch> looks through its children <Route>s and
-          renders the first one that matches the current URL. */}
       <Switch>
         <Route path="/" component={Home} />
       </Switch>
