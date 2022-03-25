@@ -16,12 +16,12 @@ function Navbar() {
           </li>
         </ul>
       </div>
-      <div className={styles.right}> 
-        <Link to="/signin"> 
-        <Button colorScheme="pink">Register</Button>
+      <div className={styles.right}>
+        <Link to="/signin">
+          <Button colorScheme="pink">Login</Button>
         </Link>
         <Link to="/signin">
-        <Button colorScheme='pink'>Button</Button>
+          <Button colorScheme="pink">Register</Button>
         </Link>
       </div>
     </nav>
