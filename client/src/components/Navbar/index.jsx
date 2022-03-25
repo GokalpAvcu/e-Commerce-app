@@ -16,9 +16,13 @@ function Navbar() {
           </li>
         </ul>
       </div>
-      <div className="right">
+      <div className={styles.right}> 
+        <Link to="/signin"> 
         <Button colorScheme="pink">Register</Button>
+        </Link>
+        <Link to="/signin">
         <Button colorScheme='pink'>Button</Button>
+        </Link>
       </div>
     </nav>
   );
