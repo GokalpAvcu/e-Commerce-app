@@ -24,6 +24,8 @@ function ProductDetail() {
 
   console.log("images", images)
 
+  console.log(process.env.REACT_APP_BASE_ENDPOINT);
+
   return (
     <div>
       <Button colorScheme="pink">Add to basket</Button>
