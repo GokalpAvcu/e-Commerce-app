@@ -6,7 +6,7 @@ import {
   FormControl,
   FormLabel,
   Input,
-  Button
+  Button,
 } from "@chakra-ui/react";
 
 function Signup() {
@@ -35,7 +35,7 @@ function Signup() {
               </FormControl>
 
               <Button mt="4" width="full" type="submit">
-               Sign Up
+                Sign Up
               </Button>
             </form>
           </Box>
