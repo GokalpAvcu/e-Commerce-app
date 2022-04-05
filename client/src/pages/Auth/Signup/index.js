@@ -9,7 +9,20 @@ import {
   Button,
 } from "@chakra-ui/react";
 
+import {useFormik} from "formik";
+
 function Signup() {
+  const formik = useFormik({
+    initialValues: {
+      email:"",
+      password:"",
+      passwordConfirm: "",
+    },
+    onSubmit: async (values,bag) => {
+      console.log(values);
+    },
+  });
+  
   return (
     <div>
       <Flex align="center" width="full" justifyContent="center">
@@ -24,7 +37,7 @@ function Signup() {
                 <Input name="email" />
               </FormControl>
 
-              <FormControl mt="4">
+               <FormControl mt="4">
                 <FormLabel>Password</FormLabel>
                 <Input name="password" type="password" />
               </FormControl>
