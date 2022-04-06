@@ -7,6 +7,10 @@ import "./reset.css";
 import { QueryClient, QueryClientProvider,  } from 'react-query'
 import { ReactQueryDevtools } from 'react-query/devtools'
 
+// contexts
+import { AuthProvider } from "./context/AuthContext";
+
+
 import { ChakraProvider } from "@chakra-ui/react";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
@@ -19,7 +23,9 @@ ReactDOM.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
     <ChakraProvider>
+      <AuthProvider>
       <App />
+      </AuthProvider>
     </ChakraProvider>
     <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>

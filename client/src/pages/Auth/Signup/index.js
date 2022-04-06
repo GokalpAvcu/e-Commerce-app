@@ -15,7 +15,10 @@ import validationSchema from "./validations";
 
 import {  fetchRegister } from '../../../api';
 
+import { useAuth } from '../../../context/AuthContext';
+
 function Signup() {
+  const {login} = useAuth
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -25,7 +28,12 @@ function Signup() {
     validationSchema,
     onSubmit: async (values, bag) => {
       try{
-        const registerResponse = await fetchRegister({ email: values.email, password: values.password });
+        const registerResponse = await fetchRegister({ 
+          email: values.email, 
+          password: values.password, 
+        });
+
+        login(registerResponse);
         console.log(registerResponse);
 
       } catch (e) {
